@@ -1,0 +1,92 @@
+{
+  "info": {
+    "_postman_id": "538d3d95-d129-4d92-83f3-6eed594a06cb",
+    "name": "Chuck Norris",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59284698",
+    "_collection_link": "https://go.postman.co/collection/59284698-538d3d95-d129-4d92-83f3-6eed594a06cb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Random Joke",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Random Joke from Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.chucknorris.io/jokes/categories",
+          "protocol": "https",
+          "host": [
+            "api",
+            "chucknorris",
+            "io"
+          ],
+          "path": [
+            "jokes",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories 16",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.chucknorris.io/jokes/random?categories=16",
+          "protocol": "https",
+          "host": [
+            "api",
+            "chucknorris",
+            "io"
+          ],
+          "path": [
+            "jokes",
+            "random"
+          ],
+          "query": [
+            {
+              "key": "categories",
+              "value": "16"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
